@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", serif;
+}
+
+.btn-first .btn.dropdown-toggle::after {
+    display: none;
+}
+
+#sidebar-menu li:hover > .menu-title a,
+#sidebar-menu li:hover > .menu-title i {
+    color: #0061f2 !important;
+}
+
+#sidebar-menu li i:hover {
+    cursor: pointer;
+}
+
+#sidebar-menu li.active > .menu-title a,
+#sidebar-menu li.active > .menu-title i {
+    color: #0061f2 !important;
+}
+
+ul.sub-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    margin-left: 9px;
+    border-left: 1px dotted black;
+    display: none;
+}
+
+ul.sub-menu li {
+    margin: 5px 0;
+}
+
+ul.sub-menu li:hover a {
+    color: #0061f2 !important;
+}
+
+
+.container-fluid .card table tbody tr td a:hover, .container-fluid .card table tbody tr td button:hover {
+    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1)) !important;
+}
+
+.active .sub-menu{
+    display: block;
+}
+
+img.active{
+    width: 200px;
+    border: 2px solid red;
+    transform: scale(1.1);
+    opacity: 0.9;
+    transition: transform 0.3s ease, border 0.3s ease;
+}

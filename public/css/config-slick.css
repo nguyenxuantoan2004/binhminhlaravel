@@ -1,0 +1,94 @@
+.slider-for {
+    width: 80%; /* Chiều rộng slider chính */
+    margin: 0 auto; /* Căn giữa slider chính */
+}
+
+.slider-for img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+    height: auto;
+    border-radius: 10px; /* Bo góc ảnh */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+}
+
+.slider-nav {
+    width: 80%; /* Chiều rộng slider nhỏ */
+    margin: 10px auto 0; /* Giảm khoảng cách với slider chính */
+}
+
+.slider-nav img {
+    width: 100px; /* Đặt kích thước thumbnail */
+    /* height: 80px; */
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+    cursor: pointer;
+    border: 2px solid transparent; /* Mặc định không có viền */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin: 5px; /* Khoảng cách giữa các thumbnail */
+}
+
+.slider-nav .slick-slide.slick-current img {
+    border: 2px solid #007bff; /* Viền xanh dương cho ảnh hiện tại */
+    transform: scale(1.1); /* Phóng to ảnh khi được chọn */
+}
+/* Loại bỏ nội dung mặc định */
+.slick-prev::before, 
+.slick-next::before {
+    content: ""; /* Không dùng nội dung mặc định */
+}
+
+/* Vòng tròn nút Prev/Next */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Kích thước nút */
+    height: 40px;
+    background-color: rgba(171, 201, 232, 0.1); /* Màu xanh nhạt */
+    border: none; /* Không viền */
+    border-radius: 50%; /* Tạo vòng tròn */
+    display: flex;
+    justify-content: center; /* Căn giữa biểu tượng ngang */
+    align-items: center; /* Căn giữa biểu tượng dọc */
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+
+/* Hiệu ứng hover */
+.slick-prev:hover, 
+.slick-prev:hover::after,
+.slick-next:hover,
+.slick-next:hover::after {
+    background-color: rgba(50, 205, 50, 0.9); /* Màu xanh lá nhạt */
+    color: white !important;
+}
+
+/* Nút Prev */
+.slick-prev {
+    left: 5px; /* Căn chỉnh vị trí nút trái */
+}
+
+/* Nút Next */
+.slick-next {
+    right: 5px; /* Căn chỉnh vị trí nút phải */
+}
+
+/* Biểu tượng mũi tên Prev */
+.slick-prev::after {
+    content: "<"; /* Biểu tượng */
+    font-size: 18px;
+    font-weight: bold;
+    color:  rgba(50, 205, 50, 0.9);
+}
+
+/* Biểu tượng mũi tên Next */
+.slick-next::after {
+    content: ">"; /* Biểu tượng */
+    font-size: 18px;
+    font-weight: bold;
+    color:  rgba(50, 205, 50, 0.9);
+}
+
+

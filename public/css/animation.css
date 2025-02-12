@@ -1,0 +1,10 @@
+.text-animation {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.text-animation.active {
+    opacity: 1;
+    transform: translateX(0);
+}

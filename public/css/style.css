@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", serif;
+}
+header {
+    z-index: 111111111111 !important;
+}
+
+.modal {
+    position: fixed; /* Đảm bảo modal nằm trong stacking context chuẩn */
+}
+
+.swal2-container {
+    position: fixed; /* Đảm bảo SweetAlert nằm ở cấp cao nhất */
+    z-index: 111111111112 !important; /* Điều chỉnh nếu cần */
+}
+.bg-1 {
+    background-color: #53ba8f !important;
+}
+
+.bg-footer {
+    background-color: #e3f2f1 !important;
+}
+
+.text-1 {
+    color: #2f8b65 !important;
+}
+
+.text-color-2 {
+    color: aquamarine !important;
+}
+
+.line {
+    height: 2px;
+    background-color: #d3d3d3;
+}
+
+#list-motorbike {
+    scroll-margin-top: 85px;
+}
+/* ================ */
+
+#wrapper {
+    width: 100%;
+    display: none;
+    position: relative;
+}
+
+#wrapper header {
+    height: 80px;
+    width: 100%;
+}
+
+#wrapper header .header-logo {
+    width: 80px;
+}
+
+#wrapper header .header-logo img {
+    width: 100%;
+    height: auto;
+}
+
+#wrapper header nav ul li:hover a {
+    color: #53ba8f !important;
+}
+
+#wrapper header .header-info .cart a {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+#wrapper header .header-info .cart:hover a {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#wrapper header .header-info .menu-info.active {
+    transform: scale(1.1);
+}
+
+#wrapper header .header-info .menu-info:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#wrapper header .header-info .cart .cart-qty {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Giúp phần tử tròn hơn */
+    color: white;
+    position: absolute;
+    top: -10px; /* Điều chỉnh vị trí theo chiều dọc */
+    right: -10px; /* Điều chỉnh vị trí theo chiều ngang */
+    font-size: 12px; /* Điều chỉnh kích thước để phù hợp với vòng tròn */
+}
+
+#wrapper header .header-info .menu-info {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#wrapper header .header-info .menu-info .user-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    white-space: nowrap;
+    min-width: 150px;
+    display: none;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+#wrapper header .header-info .menu-info .user-dropdown-menu li a {
+    transition: all 0.3s ease-in-out;
+}
+
+#wrapper header .header-info .menu-info .user-dropdown-menu li:hover a {
+    display: block;
+    padding-left: 10px;
+    /* font-weight: 400; */
+    color: #53ba8f !important;
+}
+
+/* #wrapper main#wp-content {
+    margin-top: 80px !important;
+} */
+
+#wrapper main#wp-content section.intro-section {
+    position: relative;
+    height: 80vh;
+    background-image: url("/storage/images/background-intro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#wrapper main#wp-content section .container .intro {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#wrapper main#wp-content section .container .intro p {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+#wrapper main#wp-content section .container .intro p:first-child {
+    color: aquamarine;
+}
+
+#wrapper main#wp-content section .container .intro .btn-view-product-category {
+    background-color: #27ae60;
+    border: 1px solid rgb(224, 208, 208);
+    font-size: 20px;
+    font-weight: 500;
+    min-width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.2s;
+}
+
+#wrapper
+    main#wp-content
+    section
+    .container
+    .intro
+    .btn-view-product-category:hover {
+    background-color: #229753;
+    font-size: 24px;
+}
+
+#wrapper main#wp-content .achievements-section .achievements-detail .card {
+    background-color: #a8faca;
+    transition: ease-in-out 0.2s;
+}
+
+#wrapper
+    main#wp-content
+    .achievements-section
+    .achievements-detail
+    .card
+    .card-head {
+    color: black;
+}
+
+#wrapper
+    main#wp-content
+    .achievements-section
+    .achievements-detail
+    .card
+    .card-title {
+    color: red;
+    font-weight: 500;
+}
+
+#wrapper
+    main#wp-content
+    .achievements-section
+    .achievements-detail
+    .card:hover {
+    transform: scale(1.05);
+}
+
+.motorbike-category-title {
+    max-height: 50px !important;
+}
+
+.list-motorbike .owl-nav .owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.list-motorbike .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.list-motorbike .owl-nav button span {
+    font-size: 40px;
+    padding: 5px 10px;
+    background-color: #53ba8f;
+    border-radius: 2px;
+}
+
+.see-more:hover {
+    color: #229753 !important;
+    text-decoration: underline !important;
+    transition: ease-in-out 0.25s;
+}
+
+.list-motorbike .card {
+    transition: ease-in-out 0.2s;
+}
+
+.list-motorbike-cat .card:hover {
+    transform: scale(1.02);
+}
+
+.list-motorbike .card .motorbike-action a {
+    font-size: small;
+}
+
+.list-post .card-post .post-desc,
+.list-post .card-post .post-create-date {
+    font-size: smaller;
+}
+
+.image-wrapper {
+    width: 150px; /* Kích thước chiều rộng cố định cho hình tròn */
+    height: 150px; /* Kích thước chiều cao cố định bằng chiều rộng để tạo hình vuông */
+    border-radius: 50%; /* Bo tròn toàn bộ container để tạo thành hình tròn */
+    overflow: hidden; /* Ẩn đi phần vượt ra ngoài */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin: 0 auto; /* Căn giữa container trên card */
+}
+
+.image-container {
+    width: 150px; /* Đảm bảo hình ảnh chiếm toàn bộ container */
+    height: 150px; /* Chiều cao phù hợp với chiều rộng container */
+    object-fit: cover; /* Cắt hình ảnh để vừa với kích thước container mà không bị biến dạng */
+    object-position: center; /* Giữ phần trung tâm của hình ảnh */
+}
+
+.list-customer-review .card {
+    min-height: 400px !important;
+}
+
+footer .footer-contact a:hover i {
+    color: #27ae60 !important;
+}
+
+footer .about-us ul li:hover a {
+    color: #27ae60 !important;
+}
+
+#btn-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999999;
+}
+
+#btn-top:hover {
+    color: #229753;
+}
+
+.category-motorbike ul li {
+    transition: ease-in-out 0.1s;
+}
+
+.category-motorbike ul li:hover {
+    background-color: #eeeeee;
+}
+
+.category-motorbike ul li.active {
+    background-color: #eeeeee;
+}
+
+.profile .list-group-item:first-child {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.profile .list-group-item:last-child {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.profile .list-group .list-group-item.active a {
+    color: white !important;
+}
+
+.profile .file-upload label {
+    cursor: pointer;
+}
+
+.custom-hover {
+    color: #007bff; /* Màu văn bản mặc định */
+    text-decoration: none; /* Bỏ gạch chân */
+    transition: color 0.2s ease-in-out; /* Hiệu ứng mượt khi hover */
+}
+
+.custom-hover:hover {
+    color: #0056b3 !important; /* Màu khi hover */
+    text-decoration: underline !important; /* Gạch chân khi hover */
+    cursor: pointer !important; /* Hiển thị con trỏ dạng bàn tay */
+}
+
+.custom-hover:focus {
+    outline: none !important; /* Bỏ đường viền khi focus */
+}
+
+@media (min-width: 768px) {
+    .achievements-detail .row .card .card-body {
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .achievements-detail .row .card .card-body {
+        min-height: 100px;
+    }
+}

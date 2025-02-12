@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+        <title>elFinder 2.1.x với PHP Connector</title>
+
+        <!-- Require JS (REQUIRED) -->
+        <script
+            data-main="./main.default.js"
+            src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script>
+            define("elFinderConfig", {
+                defaultOpts: {
+                    url: "php/connector.minimal.php",
+                    getFileCallback: function (file) {
+                        if (file.mime.startsWith("image/")) {
+                            if (window.opener) {
+                                // Gửi thông điệp về hình ảnh đã chọn đến cửa sổ chính
+                                window.opener.postMessage(
+                                    {
+                                        type: "file",
+                                        file: {
+                                            url: file.url, // Truyền URL chưa mã hóa
+                                            name: file.name, // Truyền tên tệp gốc
+                                        },
+                                    },
+                                    "*"
+                                );
+                                window.close(); // Đóng cửa sổ elFinder
+                            }
+                        } else {
+                            window.open(file.url, "_blank");
+                        }
+                    },
+                },
+                managers: {
+                    elfinder: {},
+                },
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Element where elFinder will be created (REQUIRED) -->
+        <div id="elfinder"></div>
+    </body>
+</html>
